@@ -67,38 +67,22 @@ The system also monitors waste disposal and identifies incorrect disposal of wet
 - Excel for fine record management
 
 ---
-                    ESP32
-                      |
-       +--------------+--------------+
-       |              |              |
-       v              v              v
-   SMART PARKING   STREET LIGHT   SMART DUSTBIN
-       |              |              |
-       v              v              v
-   Ultrasonic        LDR        Password Input
-    Sensors                       |
-       |                          v
-       v                     Servo Motor
- Parking Status                   |
-       |                          v
-       |                    Waste Monitoring
-       |                          |
-       |                          v
-       |                    Correct / Wrong
-       |                          |
-       |                          v
-       |                     Fine Generation
-       |                          |
-       |                          v
-       |                    Excel Records
-       |
-       v
-Available / Occupied
-     |
-     v
-Sensor detects vehicle
-     |
-     +-------- Vehicle Present --------+
-     |                                  |
+          IoT-Smart-City-Management/
+│
+├── Smart_City_Management.ino
+├── README.md
+│
+├── parking/
+│   └── parking_code.ino
+│
+├── street_light/
+│   └── street_light_code.ino
+│
+├── smart_dustbin/
+│   └── smart_dustbin_code.ino
+│
+└── images/
+    ├── project-prototype.jpg
+    └── circuit-diagram.jpg
      v                                  v
    OCCUPIED                         AVAILABLE
