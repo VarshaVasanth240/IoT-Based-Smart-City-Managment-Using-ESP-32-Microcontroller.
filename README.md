@@ -67,25 +67,33 @@ The system also monitors waste disposal and identifies incorrect disposal of wet
 - Excel for fine record management
 
 ---
-
-# 🚗 Module 1: Smart Car Parking System
-
-The smart parking module monitors the availability of parking spaces using sensors.
-
-Each parking slot is monitored to determine whether a vehicle is present.
-
-### Working
-
-1. The sensor continuously monitors the parking slot.
-2. When a vehicle enters a parking slot, the system detects its presence.
-3. The corresponding slot is marked as occupied.
-4. When the vehicle leaves, the slot becomes available again.
-5. The system can be used to monitor parking availability in real time.
-
-### Example
-
-```text
-Parking Slot
+                    ESP32
+                      |
+       +--------------+--------------+
+       |              |              |
+       v              v              v
+   SMART PARKING   STREET LIGHT   SMART DUSTBIN
+       |              |              |
+       v              v              v
+   Ultrasonic        LDR        Password Input
+    Sensors                       |
+       |                          v
+       v                     Servo Motor
+ Parking Status                   |
+       |                          v
+       |                    Waste Monitoring
+       |                          |
+       |                          v
+       |                    Correct / Wrong
+       |                          |
+       |                          v
+       |                     Fine Generation
+       |                          |
+       |                          v
+       |                    Excel Records
+       |
+       v
+Available / Occupied
      |
      v
 Sensor detects vehicle
